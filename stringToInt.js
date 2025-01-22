@@ -22,3 +22,5 @@ function stringToInt() {
   }
 }
 console.log(stringToInt());
+
+// out put is 3
