@@ -1,10 +1,12 @@
 // let a = " 00000000000-3 0010005 !#@$ 234  @";
-let a = "456asd0-2";
+let a = "-00010";
 let val = "";
 let temp = false;
 let flag = true;
 function stringToInt() {
   for (let i = 0; i < a.length; i++) {
+    console.log(i, "iiiiiii");
+
     // a[i] == " " ? (a[i + 1] != 0 ? (temp = true) : (temp = false)) : null;
     if (a[i] == "-" && a[i + 1] >= 0 && flag == true && !(a[i - 1] >= 0)) {
       val = "-";
@@ -20,17 +22,18 @@ function stringToInt() {
           a[i - 1] != 0) ||
         temp
       ) {
+        // console.log(a[i], i, "a of i");
         val += a[i];
-      } else continue;
+      }
     } else {
       if (a[i] == " ") continue;
       else {
         if (isNaN(a[i])) return val || 0;
         else val += a[i];
-        if (i == a.length - 1) {
-          return val;
-        }
       }
+    }
+    if (i == a.length - 1) {
+      return val;
     }
   }
 }
