@@ -1,11 +1,11 @@
-let a = " 000000000003 10005 !#@$ 234  @";  // out put is 310005
+let a = " 000000000003 0010005 !#@$ 234  @";  // output := 30010005                                              
 let val = "";
 let temp = false;
 
 function stringToInt() {
   for (let i = 0; i < a.length; i++) {
-    a[i] == " " ? (a[i + 1] != 0 ? (temp = true) : (temp = false)) : null;
-
+    // a[i] == " " ? (a[i + 1] != 0 ? (temp = true) : (temp = false)) : null;
+    a[i] > 0 ? (temp = true) : null;
     if (a[i] == "0") {
       if (
         (!isNaN(a[i + 1]) &&
@@ -26,3 +26,4 @@ function stringToInt() {
   }
 }
 console.log(stringToInt());
+
