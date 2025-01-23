@@ -4,8 +4,8 @@ let temp = false;
 
 function stringToInt() {
   for (let i = 0; i < a.length; i++) {
-    a[i] == " " ? (a[i + 1] != 0 ? (temp = true) : (temp = false)) : null;
-
+    // a[i] == " " ? (a[i + 1] != 0 ? (temp = true) : (temp = false)) : null;
+    a[i] > 0 ? (temp = true) : null;
     if (a[i] == "0") {
       if (
         (!isNaN(a[i + 1]) &&
@@ -26,3 +26,4 @@ function stringToInt() {
   }
 }
 console.log(stringToInt());
+
