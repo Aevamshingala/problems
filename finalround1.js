@@ -21,7 +21,7 @@ function maximum() {
       arr1 = arr1.filter((e) => e != max1);
     } else if (max1 == max2) {
       finalAns.push(max1);
-      arr1 = arr1.filter((e) => e != max1);
+      arr1 = arr1.filter((e) => e != max1); 
       arr2 = arr2.filter((e) => e != max2);
     } else {
       finalAns.push(max2);
